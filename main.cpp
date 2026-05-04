@@ -168,8 +168,8 @@ static void init(void)
   glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
   /* テクスチャの読み込みに使う配列 */
-  static GLubyte t[6][TEXHEIGHT * TEXWIDTH * 3];
-  static GLubyte* textures[]{ t[0], t[1], t[2], t[3], t[4], t[5] };
+  static GLubyte texture[6][TEXHEIGHT * TEXWIDTH * 3];
+  static GLubyte* textures[]{ texture[0], texture[1], texture[2], texture[3], texture[4], texture[5] };
 
   /* テクスチャの作成 */
   makeTexture(textures, TEXWIDTH, TEXHEIGHT);
