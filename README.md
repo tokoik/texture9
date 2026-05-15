@@ -21,11 +21,11 @@
 1. コマンドプロンプトまたは PowerShell を開き、このプロジェクトのディレクトリに移動します。
 2. 以下のコマンドを実行してビルドディレクトリを作成し、CMake で構成を行います。
 
-```bat
-mkdir build
-cd build
-cmake .. -G "Visual Studio 17 2022"
-```
+   ```bat
+   mkdir build
+   cd build
+   cmake .. -G "Visual Studio 17 2022"
+   ```
 
 3. 生成された build フォルダ内の texture9.sln を Visual Studio で開きます。
 4. ソリューションエクスプローラーで texture9 プロジェクトを右クリックし、「スタートアップ プロジェクトに設定」を選択します。
@@ -36,11 +36,11 @@ cmake .. -G "Visual Studio 17 2022"
 1. ターミナルを開き、このプロジェクトのディレクトリに移動します。
 2. 以下のコマンドを実行してビルドディレクトリを作成し、Xcode 用のプロジェクトを生成します。
 
-```sh
-mkdir build
-cd build
-cmake .. -G Xcode
-```
+   ```sh
+   mkdir build
+   cd build
+   cmake .. -G Xcode
+   ```
 
 3. 生成された build/texture9.xcodeproj を Xcode で開きます。
 4. 左上のスキーム選択（再生ボタンの横）が texture9 になっていることを確認します。
@@ -51,12 +51,12 @@ cmake .. -G Xcode
 1. ターミナルを開き、このプロジェクトのディレクトリに移動します。
 2. 必要なパッケージ（freeglut3-dev や pkg-config など）がインストールされていることを確認し、以下のコマンドでビルドします。
 
-```sh
-mkdir build
-cd build
-cmake ..
-make
-```
+   ```sh
+   mkdir build
+   cd build
+   cmake ..
+   make
+   ```
 
 ## 3. 使い方
 
@@ -64,21 +64,27 @@ make
 
 各OSとも、ビルド後に生成されるバイナリディレクトリ (build) やそのサブフォルダから起動します。（※ CMake の設定により、Windows や Xcode では Debug などのフォルダ下に実行ファイルが置かれることがあります）
 
-- **Windows** Visual Studio 上で「ローカル Windows デバッガー」をクリックして実行するか、またはコマンドプロンプトから以下のコマンドで起動します。
+- **Windows**
 
-```cmd
-cd build\Debug
-texture9.exe
-```
+  Visual Studio 上で「ローカル Windows デバッガー」をクリックして実行するか、またはコマンドプロンプトから以下のコマンドで起動します。
 
-- **macOS** Xcode 上で左上の「Run（再生ボタン）」をクリックするのが楽です。これにより texture9.app アプリケーションバンドルとして自動的に実行されます。アプリケーションバンドルを直接起動するなら、Finder から build/Debug/texture9.app をダブルクリックするか、ターミナルから open build/Debug/texture9.app を実行します (この場合はエラーメッセージ等が表示されません)。
+  ```cmd
+  cd build\Debug
+  texture9.exe
+  ```
 
-- **Ubuntu Linux** ターミナルから以下のコマンドで実行ファイル（バイナリ）を直接起動します。
+- **macOS**
 
-```sh
-cd build
-./texture9
-```
+  Xcode 上で左上の「Run（再生ボタン）」をクリックするのが楽です。これにより texture9.app アプリケーションバンドルとして自動的に実行されます。アプリケーションバンドルを直接起動するなら、Finder から build/Debug/texture9.app をダブルクリックするか、ターミナルから open build/Debug/texture9.app を実行します (この場合はエラーメッセージ等が表示されません)。
+
+- **Ubuntu Linux**
+
+  ターミナルから以下のコマンドで実行ファイル（バイナリ）を直接起動します。
+
+  ```sh
+  cd build
+  ./texture9
+  ```
 
 ### 3.2 操作方法
 
