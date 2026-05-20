@@ -153,11 +153,11 @@ static void makeTexture(GLubyte *tex[], int width, int height)
 #endif
 
 #if 0
-  FILE *fp;
   static char tname[] = "aX.raw";
   for (i = 0; i < 6; ++i) {
     tname[1] = i + '0';
-    if (fp = fopen(tname, "wb")) {
+    FILE* fp = fopen(tname, "wb");
+    if (fp) {
       fwrite(t[i], sizeof(unsigned char) * 3, width * height, fp);
       fclose(fp);
     }
