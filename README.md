@@ -10,7 +10,7 @@
 
 プログラムを実行すると、青色のティーポットが表示されます。マウスでドラッグを行うと、ティーポット自体は回転せずに、光源が回転しているように拡散反射光（陰影）と鏡面反射光（ハイライト）が連動して移動します。
 
-![キューブマッピングで Phong シェーディング](https://tokoik.github.io/blog/assets/images/texture9a.webp)
+![キューブマッピングで Phong シェーディング](https://tokoik.github.io/blog/assets/images/texture/texture9a.webp)
 
 ## 2. ビルド方法
 
